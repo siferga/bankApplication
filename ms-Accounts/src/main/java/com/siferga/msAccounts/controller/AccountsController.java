@@ -1,10 +1,10 @@
 package com.siferga.msAccounts.controller;
 
 import com.siferga.msAccounts.model.Accounts;
+import com.siferga.msAccounts.model.Customer;
 import com.siferga.msAccounts.repository.AccountsRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 
 @RestController
 public class AccountsController {
@@ -15,15 +15,11 @@ public class AccountsController {
     }
 
     @PostMapping("/myAccount")
-    public Accounts getAccountById(@RequestParam Integer id) {
-        return accountsRepository.findById(id).get();
+    public Accounts getAccountDetails(@RequestBody Customer customer) {
+        return accountsRepository.findByCustomerId(customer.getCustomerId());
     }
 
-   /* @PostMapping
-    public Accounts createAccount(@PathVariable int id,@RequestBody Customer customer) {
-        return accountsRepository.findById(id);
 
-    }*/
 
 
 
