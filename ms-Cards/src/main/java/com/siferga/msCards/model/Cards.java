@@ -1,4 +1,4 @@
-package com.siferga.msCards.controller;
+package com.siferga.msCards.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -12,6 +12,7 @@ import java.util.Date;
 @Setter
 @ToString
 public class Cards {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "card_id")
