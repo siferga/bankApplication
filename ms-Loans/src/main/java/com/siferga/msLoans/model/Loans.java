@@ -40,7 +40,7 @@ public class Loans {
     private int outstandingAmount;
 
     @Column(name = "create_dt")
-    private Date createDate;
+    private String createDate;
 
 
 
