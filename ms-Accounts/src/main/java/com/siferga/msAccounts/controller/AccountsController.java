@@ -5,7 +5,6 @@ import com.siferga.msAccounts.model.Customer;
 import com.siferga.msAccounts.repository.AccountsRepository;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 public class AccountsController {
     private final AccountsRepository accountsRepository;
