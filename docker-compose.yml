@@ -1,0 +1,32 @@
+version: "2.24"
+
+services:
+  ms-Accounts:
+    container_name: accounts
+    image: siferga/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - bankApplication-network
+
+  ms-Cards:
+    container_name: cards
+    image: siferga/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - bankApplication-network
+
+  ms-Loans:
+    container_name: loans
+    image: siferga/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - bankApplication-network
+
+networks:
+  bankApplication-network:
